@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -9,19 +9,213 @@
 	<title>CSS. Block layout</title>
 
 	<style>
+		/* HEADER */
+		.logo {
+			float: left;
+			margin-top: 0.7em;
+		}
 
+		.logo img {
+			/* logo img size % */
+			width: 150%;
+		}
 
+		nav {
+			float: right;
+			margin-top: 3.2em;
+			padding: 0.5em;
+		}
 
+		a {
+			margin-left: 10px;
+			text-decoration: none;
+			color: #999966;
+			font-weight: bold;
+		}
+
+		header {
+			width: auto;
+			margin: 5px;
+			overflow: auto;
+			border: 3px solid #336699;
+		}
+
+		/* LEFT SIDE MENU */
+		/* Style for the sidebar container */
+		.sidebar {
+			width: 210px;
+			background-color: #ffffff;
+			float: left;
+			border: 3px solid #336699;
+			border-spacing: 0px;
+			margin: 5px;
+		}
+
+		.sidebar a:hover {
+			color: #336699;
+			font-weight: bold;
+		}
+
+		/* Style for the sidebar links */
+		.sidebar a:not(:first-child) {
+			text-decoration: none;
+			color: #999966;
+			padding: 5px 5px 5px 5px;
+		}
+
+		main {
+			/*отступ от левого меню*/
+			margin-left: 220px;
+		}
+
+		/* MAIN STYLE */
+		.hTop {
+			background-color: #336699;
+			color: #ffffff;
+			padding: 5px 5px 5px 5px;
+			font-weight: bold;
+			margin: 5px;
+			margin-top: 10px;
+		}
+
+		ul li {
+			list-style-image: url(arrow.gif);
+			margin-left: -25px;
+			color: red;
+		}
+
+		.img1 {
+			float: right;
+			height: 400px;
+			margin: 5px;
+		}
+
+		.img2 {
+			float: left;
+			height: 400px;
+			margin: 5px;
+		}
+
+		p {
+			text-align: justify;
+		}
+
+		table.sidebar td:hover {
+			border: 3px solid #336699;
+			color: #336699;
+		}
 	</style>
 
 </head>
 
 <body>
 
-	<head>
-		<h1>Block layout</h1>
-		
-	</head>
+	<header>
+
+		<div class="logo">
+			<img src="header.gif" alt="logo.gif">
+		</div>
+		<nav>
+			<a href="#">Домой</a>
+			<a href="#">Программы</a>
+			<a href="#">Поддержка</a>
+			<a href="#">Контакты</a>
+			<a href="#">О нас</a>
+			<a href="#">English</a>
+		</nav>
+
+	</header>
+
+	<!-- TABLE WITH 12 ROWS -->
+	<table class="sidebar">
+		<tr>
+			<td><a href="#">Parallaxis WinClip</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Домой</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Возможности</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Загрузить</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Купить</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Обучение</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Новая версия</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Пресс-центр</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Награды</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Сервисы</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Работа у нас</a></td>
+		</tr>
+		<tr>
+			<td><a href="#">Партнерская программа</a></td>
+		</tr>
+	</table>
+
+	<main>
+
+		<div class="hTop">
+			WinClip Tour
+		</div>
+		<img class="img1" src="tour_big7.gif" alt="image">
+		<div style="padding: 10px;">
+			<div style="color: #336699; font-weight: bold;"> WinClip для дизайнеров</div>
+			<p>
+
+				WinClip - идеальное средство для дизайнеров. Наверняка Вы, как опытный дизайнер, наработали множество шаблонов,
+				которые часто используете в своей работе.
+			</p>
+			<p>
+				Вот только некоторые примеры часто используемых шаблонов:
+			<ul>
+				<li>Графические элементы (стрелки, сетки и т.п.)</li>
+				<li>Графические стили</li>
+				<li>Маски</li>
+				<li>Шаблоны таблиц</li>
+				<li>Шаблоны CSS и HTML стилей</li>
+				<li>Готовые шаблоны веб-страниц</li>
+				<li>Часто используемые изображения</li>
+			</ul>
+			</p>
+			<p>
+				С помощью WinClip Вы сможете удобно организовать работу с шаблонами. Для этого создайте банк с названием, таким
+				как
+				"Мои шаблоны". По мере накопления шаблонов, копируйте их в созданный банк. Шаблоны могут быть мгновенно
+				вставлены
+				в
+				картину или веб-страницу по нажатию клавиши Ctrl+Q и выбору нужного шаблона.
+			</p>
+			<p>
+				<img class="img2" src="tour_big8.gif" alt="image">
+				Вы с легкостью сможете создавать сложнейшие и красивейшие образцы дизайна, если будете постоянно пользоваться
+				Вашими
+				заготовками. Вместо того, чтобы постоянно рисовать весь дизайн заново, Вы сможете использовать сделанные заранее
+				заготовки, что несомненно облегчит Ваш труд и ускорит Вашу работу.
+			</p>
+			<p>
+				<span style="font-weight: bold;"> Веб-дизайнеру:</span> в банках WinClip Вы можете хранить различные стили,
+				таблицы и шаблоны страниц. Обратите,
+				например,
+				внимание на дизайн этого сайта. Вы видите множество таблиц с тонкими цветными границами. Создать такую таблицу
+				в
+				редакторе типа DreamWeaver довольно сложно, надо набрать вручную следующий код:
+			</p>
+		</div>
+	</main>
 
 </body>
 
